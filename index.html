@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>pixel's home</title>
 
 </head>
 <header>
@@ -13,8 +13,19 @@
 </title>
 
 <body>
-    <h1>pixel's home</h1>
-    <p>hi!!! i'm pixel, an amateur developer and cs undergrad. i go by he/they, but any pronouns are fine. hope you have a good stay!!!</p>
+    <center>
+        <h1>pixel's home</h1>
+    </center>
+
+    <center>
+        <pre><nav><a href="#intro">intro</a>    <a href="#work">Work Experience</a>   <a href="#hobbies">Hobbies</a>    <a href="#projects">Personal Projects</a>   <a href="#quotes">Quote Wall</a></nav></pre>
+    </center>
+
+    <section>
+    <p>hi!!! i'm pixel, an amateur developer and cs undergrad. i love learning, building and testing new things! i go by he/they, any are fine. on this page, you'll find information about me, my work experience, personal projects hobbies and some quotes that you might find touching. hope you have a good stay!!!</p>
+    </section>
+
+
     </header>
     <p>Here are my socials:</p>
     <a href="https://www.github.com/PixelHalide" target=_blank title="my github">github</a> <br>
@@ -39,10 +50,10 @@
     </ol>
     <article>
     <p>
-        now, Sending out reports every month was a very tedious task. You had to go to mongodb, query all the required numbers, Input all the reviews into ChatGPT for other analysis and finally manually put them in in canva.
+        but, ending out reports every month was a very tedious task. You had to go to mongodb, query all the required numbers, Input all the reviews into ChatGPT for other analysis and finally manually put them in in canva.
     </p>
     <p>
-        so I automated this whole system by writing a python project to do all of this. It fetches records from MongoDB, Processes them, and puts it into a PPT, Converts it to PDF, and the uploads it to an S3 bucket where we can send them to our clients.
+        so I automated this whole system by writing a python project to do all of this. It fetches records from MongoDB, Processes them, and puts it into a PPT, Converts it to PDF, and the uploads it to an S3 bucket where we can send them to our clients. there's also various other features such as AI analysis of the reviews which i worked on.
     </p>
     <p>
         it was a really fun project to work on and I learned a lot about the various libraries in python such as openai, pymongo, and many more. New features, Maintenance and optimisations are always being worked on. The whole project is 4k+ lines as of now.
@@ -58,8 +69,45 @@
         </address>
     </aside>
 
+    <br>
+    <sub>we're hiring interns! hit me up if you've done some cool projects and are looking for a paid internship</sub>
+
+    </section>
     <hr>
 
+    <section>
+    <h2>hobbies</h2>
+
+    <p>i don't get a lot of time to indulge in my hobbies, but i like em a lot! here they are:</p>
+    <dd>
+        <b><dt>chess</dt></b>
+        <dd>i play mostly rapid and bullet. i'm around 1300-1400 ish rating on both</dd>
+        <b><dt>2D rigging</dt></b>
+        <dd>for the uninformed, is like animation. You take a 2D drawing, and you make it able move in any way possible. I mostly rig <abbr title="Virtual YouTuber">VTuber</abbr> models for fun. Here's an example (excuse my voice, i was tired): </dd>
+    </dd>
+    <br>
+    <video controls width="640" height="360">
+        <source src="media/vchuba.mp4" type="video/mp4">
+    </video>
+    </section>
+
+    <hr>
+
+    <h2>personal projects</h2>
+
+    <p>
+        i've done one personal project so far, which is rankPredictor. it's a website which allows you to predict your rank for various entrance exams by inputting your marks. it currently has data for MET 2025 & 2024, KCET 2024. i had made it with a friend while anxiously waiting for my MET result.
+    </p>
+
+    <p>you can check it out at <a href="https://rankpredictor.in" target="_blank", title="rankPredictor">https://rankpredictor.in</a>, here's how it looks:</p>
+    <img src="media/rank.png" alt="Rank Predictor UI" width="550" height="500">
+
+    <p>
+        it works on the basis of linear interpolation. data is scraped from the web and and college campuses for various places, and the user's score is interpolated based on the scraped data to return a rank. it utilises simple HTML, CSS and Javascript with no <s>bloatware</s> frameworks like react. for MET 2024, it was very accurate for ranks greater than 7k with only a 1k difference in predicted and actual rank.
+    </p>
+
+    <hr>
+    <section>
     <h2>quote wall</h2>
 
     <blockquote cite="https://www.goodreads.com/quotes/10480697-an-idiot-admires-complexity-a-genius-admires-simplicity-a-physicist"><h3>
@@ -79,41 +127,15 @@
         <img src="media/stallman.jpg" alt="Richard Stallman" width="300" height="450">
         <figcaption>Richard Stallman</figcaption>
     </figure>
-    <hr>
-
-    <h2>hobbies</h2>
-
-    <p>i don't get a lot of time to indulge in my hobbies, but i like em a lot! here they are:</p>
-    <dd>
-        <b><dt>chess</dt></b>
-        <dd>i play mostly rapid and bullet. i'm around 1300-1400 ish rating on both</dd>
-        <b><dt>2D rigging</dt></b>
-        <dd>for the uninformed, is like animation. You take a 2D drawing, and you make it able move in any way possible. I mostly rig <abbr title="Virtual YouTuber">VTuber</abbr> models for fun. Here's an example (excuse my voice, i was tired): </dd>
-    </dd>
-    <br>
-    <video controls width="640" height="360">
-        <source src="media/vchuba.mp4" type="video/mp4">
-    </video>
 
     <hr>
 
-    <h2>personal projects</h2>
-
-    <p>
-        i've done one personal project so far, which is rankPredictor. it's a website which allows you to predict your rank for various entrance exams by inputting your marks. it currently has data for MET 2025 & 2024, KCET 2024. i had made it with a friend while anxiously waiting for my MET result.
-    </p>
-
-    <p>you can check it out at <a href="https://rankpredictor.in" target="_blank", title="rankPredictor">https://rankpredictor.in</a>, here's how it looks:</p>
-    <img src="media/rank.png" alt="Rank Predictor UI" width="447" height="310">
-
-    <p>
-        it works on the basis of linear interpolation. data is scraped from the web and and college campuses for various places, and the user's score is interpolated based on the scraped data to return a rank. it utilises simple HTML, CSS and Javascript with no <s>bloatware</s> frameworks like react. for MET 2024, it was very accurate for ranks greater than 7k.
-    </p>
-
-    <hr>
+    </section>
     </main>
+
     <footer>
         <p>made by pixel. all code is licensed under GPLv3.</p>
     </footer>
+
 </body>
 </html>
