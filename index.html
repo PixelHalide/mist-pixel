@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pixel's home</title>
     <base href="https://pixelhalide.github.io/mist-pixel/">
-
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type= "image/png" href="media/favicon.ico">
 </head>
 <main>
 <title>
@@ -22,6 +23,8 @@
         <center>
             <pre><nav><a href="#intro">intro</a>    <a href="#work">work experience</a>   <a href="#hobbies">hobbies</a>    <a href="#projects">personal projects</a>   <a href="#quotes">quote wall</a></nav></pre>
         </center>
+
+        <audio controls> <source src="intro.wav"></audio>
     </header>
 
     <section id="intro">
@@ -92,9 +95,11 @@
             <dd>for the uninformed, is like animation. You take a 2D drawing, and you make it able move in any way possible. I mostly rig <abbr title="Virtual YouTuber">VTuber</abbr> models for fun. Here's an example (excuse my voice, i was tired): </dd>
         </dd>
         <br>
-        <video controls width="640" height="360">
-            <source src="media/vchuba.mp4" type="video/mp4">
-        </video>
+        <figure>
+            <video controls width="640" height="360">
+                <source src="media/vchuba.mp4" type="video/mp4">
+            </video>
+        </figure>
     </section>
 
     <hr>
@@ -112,6 +117,147 @@
         <p>
             it works on the basis of linear interpolation. data is scraped from the web and and college campuses for various places, and the user's score is interpolated based on the scraped data to return a rank. it utilises simple HTML, CSS and Javascript with no <s>bloatware</s> frameworks like react. for MET 2024, it was very accurate for ranks greater than 7k with only a 1k difference in predicted and actual rank.
         </p>
+        <p>
+            here's an example of how the data might look:
+        </p>
+        <div>
+        <table>
+            <caption>MET 2020 Results Data</caption>
+            <thead>
+              <tr>
+                <th>MET marks (/800)</th>
+                <th>MET %</th>
+                <th>Boards %</th>
+                <th>1 Band score</th>
+                <th>Rank</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>613</td>
+                <td>76.625</td>
+                <td>95.8</td>
+                <td>85.975</td>
+                <td>108</td>
+              </tr>
+              <tr>
+                <td>579</td>
+                <td>72.375</td>
+                <td>96.6</td>
+                <td>83.425</td>
+                <td>228</td>
+              </tr>
+              <tr>
+                <td>512</td>
+                <td>64</td>
+                <td>95.5</td>
+                <td>78.4</td>
+                <td>604</td>
+              </tr>
+              <tr>
+                <td>505</td>
+                <td>63.125</td>
+                <td>96.5</td>
+                <td>77.875</td>
+                <td>672</td>
+              </tr>
+              <tr>
+                <td>480</td>
+                <td>60</td>
+                <td>96.66</td>
+                <td>76</td>
+                <td>950</td>
+              </tr>
+              <tr>
+                <td>406</td>
+                <td>50.75</td>
+                <td>96</td>
+                <td>70.45</td>
+                <td>2234</td>
+              </tr>
+              <tr>
+                <td>490</td>
+                <td>61.25</td>
+                <td>85</td>
+                <td>72.75</td>
+                <td>3016</td>
+              </tr>
+              <tr>
+                <td>382</td>
+                <td>47.75</td>
+                <td>93</td>
+                <td>66.65</td>
+                <td>4493</td>
+              </tr>
+              <tr>
+                <td>375</td>
+                <td>46.875</td>
+                <td>91.5</td>
+                <td>66.125</td>
+                <td>4700</td>
+              </tr>
+              <tr>
+                <td>370</td>
+                <td>46.25</td>
+                <td>93</td>
+                <td>65.75</td>
+                <td>6700</td>
+              </tr>
+              <tr>
+                <td>375</td>
+                <td>46.875</td>
+                <td>81.5</td>
+                <td>62.125</td>
+                <td>11012</td>
+              </tr>
+              <tr>
+                <td>233</td>
+                <td>29.125</td>
+                <td>87.76</td>
+                <td>49.475</td>
+                <td>15762</td>
+              </tr>
+              <tr>
+                <td>427</td>
+                <td>53.375</td>
+                <td>70</td>
+                <td>62.025</td>
+                <td>17044</td>
+              </tr>
+              <tr>
+                <td>356</td>
+                <td>44.5</td>
+                <td>75.5</td>
+                <td>58.7</td>
+                <td>18132</td>
+              </tr>
+              <tr>
+                <td>568</td>
+                <td>71</td>
+                <td>0</td>
+                <td>42.6</td>
+                <td>21000</td>
+              </tr>
+              <tr>
+                <td>240</td>
+                <td>30</td>
+                <td>69</td>
+                <td>46</td>
+                <td>31500</td>
+              </tr>
+              <tfoot>
+                <tr>
+                  <td><b>432</b></td>
+                  <td><b>54</b></td>
+                  <td><b>82.7</b></td>
+                  <td><b>66.5</b></td>
+                  <td><b>8634</b></td>
+                  <td><b>Average</b></td>
+                </tr>
+              </tfoot>
+            </tbody>
+          </table>
+        </div>
     </section>
 
     <hr>
@@ -137,19 +283,16 @@
         <figcaption>Richard Stallman</figcaption>
     </figure>
 
+    </section>
+
+
+    <p>if you liked my website, consider signing my guestbook!</p>
+    <input type="text">
+
     <hr>
-
-    </section>
-
-    <section>
-        <table>
-            <tr>
-                <th></th>
-            </tr>
-        </table>
-    </section>
     </main>
 
+    <!-- hi! -->
     <footer>
         <p>made by pixel. all code is licensed under GPLv3.</p>
     </footer>
