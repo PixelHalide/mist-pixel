@@ -1,0 +1,64 @@
+body {
+    background-color: #333333;
+    color: white;
+    margin: 20px;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+#submit{
+    background-color: #45a049;
+    border-color: #45a049;
+    border-style: solid;
+}
+
+#border{
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.odd {
+    background-color: darkgrey;
+}
+
+table {
+    text-align: center;
+    border-style: solid;
+
+}
+
+aside {
+    text-align: right;
+    border-color: white;
+    width: 250px;
+    border-style: solid;
+    border-right: none;
+    margin-right: 0cm
+}
+
+a {
+    color: #007bff;
+}
+
+a:hover{
+    color: #49a0fc;
+}
+
+a:visited{
+    color: #8463bf;
+}
+
+#right {
+    text-align: right;
+}
+
+#center {
+    text-align: center;
+}
