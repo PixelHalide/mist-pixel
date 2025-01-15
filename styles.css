@@ -40,7 +40,8 @@ aside {
     width: 250px;
     border-style: solid;
     border-right: none;
-    margin-right: 0cm
+    margin-right: 0cm;
+    float: right;
 }
 
 a {
