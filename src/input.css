@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+hr{
+    @apply py-2;
+}

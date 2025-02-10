@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <base href="https://pixelhalide.github.io/mist-pixel/">
+    <!-- base href="https://pixelhalide.github.io/mist-pixel/" -->
+    <link href="./src/output.css" rel="stylesheet">
     <link rel="icon" type= "image/png" href="media/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<main class="m-3">
+<main class="bg-[#333333] py-3 px-5">
 <title>
     pixel's home
 </title>
 
-<body class="bg-dark text-white">
+<body class="text-white">
     <header>
 
-        <h1>pixel's home</h1>
+        <h1 class="text-4xl text-center">pixel's home</h1>
 
-        <pre><nav><a href="#intro">intro</a>    <a href="#work">work experience</a>   <a href="#hobbies">hobbies</a>    <a href="#projects">personal projects</a>   <a href="#quotes">quote wall</a></nav></pre>
+        <nav class="flex justify-evenly px-35 py-5"><a href="#intro">intro</a>    <a href="#work">work experience</a>   <a href="#hobbies">hobbies</a>    <a href="#projects">personal projects</a>   <a href="#quotes">quote wall</a></nav>
 
         <audio controls> <source src="media/intro.mp3"></audio>
     </header>
@@ -27,12 +26,21 @@
         <p>hi!!! i'm pixel<sub> he/they</sub>, i'm an amateur developer and a cs undergrad. i like linux, cybersecurity and tech! on this page, you'll find information about me like my work experience, personal projects, hobbies and some quotes that you might find inspiring. hope you have a good stay!!!</p>
 
         <p>Here are my socials:</p>
-        <img src="media/github.svg" width="10" height="10" alt="github logo">
-        <a href="https://www.github.com/PixelHalide" target=_blank title="my github">github</a> <br>
-        <img src="media/youtube.png" width="10" height="10" alt="youtube logo">
-        <a href="https://www.youtube.com/@pixelatedxenon9579" target=_blank title="my youtube">youtube</a> <br>
+
+        <a href="https://www.github.com/PixelHalide" target="_blank" title="my github">
+          <img src="media/github.svg" width="10" height="10" alt="github logo" class="inline">
+          github
+        </a>
+        <br>
+
+        <a href="https://www.youtube.com/@pixelatedxenon9579" target="_blank" title="my youtube">
+          <img src="media/youtube.png" width="10" height="10" alt="youtube logo" class="inline">
+          youtube
+        </a>
+        <br>
+
         <p>i mainly use python, but i also know these programming languages/technologies:</p>
-        <ul id="p1">
+        <ul class="list-disc pl-10">
             <li>C</li>
             <li>MongoDB</li>
             <li>HTML, CSS</li>
@@ -43,10 +51,11 @@
 
     <section id="work">
         <h2>work experience</h2>
+        <div class="text-justify">
         <p>
             i'm currently interning at a Thai startup called <strong>Guestasy</strong> for the past <time datetime="01-06-2024">7 months</time>. i can best describe my position as a... software engineer? Here are some of the projects i've worked on at the company:
         </p>
-        <ol>
+        <ol class="list-decimal pl-10 py-2">
             <li>Report Generator</li>
             <li>Email Notifier for unpublished review responses</li>
         </ol>
@@ -66,8 +75,9 @@
             it's a really fun project to be working on and I learned a lot about the various libraries in python such as <code>openai, pymongo </code>and many more. New features, Maintenance and optimisations are always being worked on. The whole project is 4k+ lines as of now.
         </p>
         </article>
+        </div>
 
-        <p id="right">if you ever wanna pop by and say hi to the founders <em>(really cool people!)</em>, you can meet them here:</p>
+        <p>if you ever wanna pop by and say hi to the founders <em>(really cool people!)</em>, you can meet them here:</p>
         <aside>
             <address>
                 160 Robinson Rd,<br>
@@ -94,17 +104,17 @@
         </dd>
         <br>
         <figure>
-          <div id="center">
-            <video controls width="640" height="360" id="border">
+          <div class="flex justify-center py-10">
+            <video controls width="640" height="360" class="border-4 border-solid rounded-2xl"
                 <source src="media/vchuba.mp4" type="video/mp4">
             </video>
           </div>
         </figure>
         <p id="right">i also do a bit of amateur photography. i use a samsung galaxy s20 ultra which takes faily decent pictures. here's a few cool pictures i've taken:</p>
-        <div id="center">
-          <img src="media/tree.jpg" alt="Tree" width="300" height="400" id="border">
-          <img src="media/street.jpg" alt="Street" width="300" height="400" id="border">
-          <img src="media/peacock.jpg" alt="Peacock" width="300" height="400" id="border">
+        <div class="flex justify-center py-5 gap-2">
+          <img src="media/tree.jpg" alt="Tree" width="300" class="border-2 border-solid">
+          <img src="media/street.jpg" alt="Street" width="300" class="border-2 border-solid">
+          <img src="media/peacock.jpg" alt="Peacock" width="300" class="border-2 border-solid">
         </div>
     </section>
     <hr>
@@ -112,23 +122,25 @@
     <section id="projects">
         <h2>personal projects</h2>
 
+        <div class="text-justify">
         <p>
             my main project so far is rankPredictor. it's a website which allows you to predict your rank for various entrance exams by inputting your marks. it currently has data for MET 2025 & 2024, KCET 2024. i had made it with a friend while anxiously waiting for my MET result.
         </p>
 
         <p>you can check it out at <a href="https://rankpredictor.in" target="_blank", title="rankPredictor">https://rankpredictor.in</a>, here's how it looks:</p>
 
-        <div id="center">
-          <img src="media/rank.png" alt="Rank Predictor UI" width="550" height="500" id="border">
+        <div class="flex justify-center py-3">
+          <img src="media/rank.png" alt="Rank Predictor UI" width="550" height="500" class="border-2 border-solid">
         </div>
-        <br>
+
         <p>
             it works on the basis of linear interpolation. data is scraped from the web and and college campuses for various places, and the user's score is interpolated based on the scraped data to return a rank. it utilises simple HTML, CSS and Javascript with no <s>bloatware</s> frameworks like react. for MET 2024, it was very accurate for ranks greater than 7k with only a 1k difference in predicted and actual rank.
         </p>
         <p>
             here's an example of how the data might look:
         </p>
-        <div class="d-flex justify-content-center">
+      </div>
+        <div class="flex justify-center">
         <table>
             <caption>MET 2020 Results Data</caption>
             <thead>
@@ -305,11 +317,8 @@
     </main>
 
     <!-- hi! -->
-    <footer class="m-3">
+    <footer>
         <p>made by pixel. all code is licensed under GPLv3.</p>
     </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </body>
 </html>
