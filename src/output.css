@@ -581,6 +581,9 @@
   .end-2 {
     inset-inline-end: calc(var(--spacing) * 2);
   }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
   .isolate {
     isolation: isolate;
   }
@@ -695,6 +698,9 @@
   .mr-4 {
     margin-right: calc(var(--spacing) * 4);
   }
+  .mr-10 {
+    margin-right: calc(var(--spacing) * 10);
+  }
   .box-border {
     box-sizing: border-box;
   }
@@ -781,6 +787,9 @@
   }
   .aspect-square {
     aspect-ratio: 1 / 1;
+  }
+  .h-auto {
+    height: auto;
   }
   .h-screen {
     height: 100vh;
@@ -1305,6 +1314,9 @@
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-s {
     border-start-start-radius: 0.25rem;
     border-end-start-radius: 0.25rem;
@@ -1453,6 +1465,9 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
+  }
+  .bg-yellow-50 {
+    background-color: var(--color-yellow-50);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
@@ -1620,9 +1635,6 @@
   .object-top {
     object-position: top;
   }
-  .p-0 {
-    padding: calc(var(--spacing) * 0);
-  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
@@ -1638,8 +1650,14 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
@@ -1786,6 +1804,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-white {
     color: var(--color-white);
@@ -2233,9 +2254,11 @@
   .transform-view {
     transform-box: view-box;
   }
-  .dark\:bg-\[\#333333\] {
-    @media (prefers-color-scheme: dark) {
-      background-color: #333333;
+  .hover\:bg-yellow-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-yellow-100);
+      }
     }
   }
 }
