@@ -1638,6 +1638,12 @@
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
+  .p-7 {
+    padding: calc(var(--spacing) * 7);
+  }
+  .p-58 {
+    padding: calc(var(--spacing) * 58);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
