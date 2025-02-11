@@ -1,5 +1,22 @@
 @import "tailwindcss";
-
 hr{
     @apply py-2;
+}
+
+h2{
+    @apply text-3xl pb-2
+}
+
+a{
+    @apply text-blue-500 hover:text-blue-700 visited:text-purple-500 visited:hover:text-purple-700;
+}
+table th{
+    @apply  px-5;
+}
+
+td{
+    @apply rounded;
+}
+tr{
+    @apply rounded;
 }

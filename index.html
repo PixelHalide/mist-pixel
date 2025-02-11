@@ -43,68 +43,87 @@
         <ul class="list-disc pl-10">
             <li>C</li>
             <li>MongoDB</li>
-            <li>HTML, CSS</li>
+            <li>HTML, CSS (Tailwind)</li>
         </ul>
     </section>
+    <br>
 
     <hr>
-
     <section id="work">
-        <h2>work experience</h2>
-        <div class="text-justify">
+      <h2>work experience</h2>
+      <div class="text-justify">
         <p>
-            i'm currently interning at a Thai startup called <strong>Guestasy</strong> for the past <time datetime="01-06-2024">7 months</time>. i can best describe my position as a... software engineer? Here are some of the projects i've worked on at the company:
+            i'm currently interning at a Thai startup called <strong>Guestasy</strong>, and i've been there for like, <time datetime="2024-06-01">7 months</time> now. i guess you could call me a software engineer, idk.  i've mostly been working on this one big project: their report generator.
         </p>
-        <ol class="list-decimal pl-10 py-2">
-            <li>Report Generator</li>
-            <li>Email Notifier for unpublished review responses</li>
-        </ol>
-        <p>now, let's talk about my magnum opus at the company. The report generator. Our company offers reputation management services to various hotels in the South-East Asia region. Some services we include are:</p>
-        <ol>
-            <li>Responding to Reviews - We respond to reviews left by customers on our client's review pages in multiple langauges</li>
-            <li>Monthly Reports - Every month, We send out a report to our clients detailing their performance based on various metrics such as review count, Languages, etc. </li>
-        </ol>
+        <br>
+        <p>
+           basically, we help hotels manage their online reputation. we do stuff like:
+        </p>
+        <ul>
+            <li><strong class="text-xl underline py-2">responding to reviews:</strong> they respond to reviews left by customers on their client's page on review platforms in various languages</li>
+            <li><strong class="text-xl underline py-2">monthly reports:</strong> they send out these reports every month to their clients, detailing their performance, things like how many reviews they got, what languages people are writing in, etc.</li>
+        </ul>
+
         <article>
         <p>
-            but, sending out reports every month was a very tedious task. You had to go to mongodb, query all the required numbers, Input all the reviews into an LLM for other analysis and finally manually put them in in canva.
+            the old way of making these reports was *super* tedious. you had to manually query all the data from MongoDB, feed the reviews to some AI to analyze them, and copy and paste everything into canva. it was a pain.
         </p>
-        <p>
-            so I automated this whole system by writing a python project to do all of this. It fetches records from MongoDB, Processes them, and puts it into a PPT, Converts it to PDF, and the uploads it to an S3 bucket where we can send them to our clients. there's also various other features such as AI analysis of the reviews which i worked on.
-        </p>
-        <p>
-            it's a really fun project to be working on and I learned a lot about the various libraries in python such as <code>openai, pymongo </code>and many more. New features, Maintenance and optimisations are always being worked on. The whole project is 4k+ lines as of now.
-        </p>
-        </article>
+        <div class="flex justify-between">
+          <div>
+            <p class="py-2">
+                so, i built this automation system using Python to do all of that automatically. the code is shit, but here's how it works:
+                  <ul class="list-decimal pl-10 pb-5 mr-4">
+                      <li><strong>query data:</strong> it goes to MongoDB and quries all the review data it needs like the review count, rating, etc.</li>
+                      <li><strong>ai magic:</strong> the reviews are then passed onto the OpenAI api to do some stuff like:
+                          <ul class="list-disc pl-7">
+                              <li><strong>sentiment analysis:</strong> gets key words from the review and their sentiment (positive, negative, neutral).</li>
+                              <li><strong>staff mentions:</strong> detects the mentions of any staff in reviews and analyzes their performance</li>
+                              <li><strong>word clouds:</strong> generates a word cloud of positive and negative phrases</li>
+                              <li><strong>auto-summaries:</strong> it writes summaries about different things, like what people are saying about the staff, what needs improvement, what's good, etc.</li>
+                          </ul>
+                      </li>
+                      <li><strong>generation time:</strong> it takes all the data and the AI insights, and automatically creates a PowerPoint presentation using this library called <code>python-pptx</code>. then, it turns it into a PDF and uploads it to S3 so we can send it to the clients.</li>
+                  </ul>
+            </p>
+          </div>
+          <img src="media/reports.png" alt="Report Template" class="object-fit" width="500" height="311">
         </div>
 
-        <p>if you ever wanna pop by and say hi to the founders <em>(really cool people!)</em>, you can meet them here:</p>
-        <aside>
-            <address>
-                160 Robinson Rd,<br>
-                #14-04 Singapore Business Federation Center,<br>
-                Singapore 068914<br>
-            </address>
+        <p class="pt-7">
+            it's a fun project to be working on, and i've learned a lot about Python libraries like <code>openai</code> and <code>pymongo</code>.  i'm always adding new features, fixing my shit code, and making it faster. the whole thing is over 4000 lines of code now, and it's still growing.
+        </p>
+        </article>
+      </div>
+
+      <p>if you're ever in singapore and wanna say hi to the founders (really cool people!), here's where you can find them:</p>
+
+      <div class="flex justify-between w-full pt-5">
+        <address>
+          160 Robinson Rd,<br>
+          #14-04 Singapore Business Federation Center,<br>
+          Singapore 068914<br>
+        </address>
+        <aside class="text-right">
+          <p><sub>we're <ins>hiring</ins> interns!  if you've built some cool stuff and you're looking for a paid internship, hit me up!</sub></p>
         </aside>
-
-        <br>
-        <sub>we're <ins>hiring</ins> interns! hit me up if you've done some cool projects and are looking for a paid internship</sub>
-
-    </section>
+      </div>
+      <br>
+  </section>
     <hr>
 
     <section id="hobbies">
         <h2>hobbies</h2>
 
-        <p>i don't get a lot of time to indulge in my hobbies, but i like em a lot! here they are:</p>
+        <p>i don't get a lot of time to indulge in my hobbies, but i like them a lot! here they are:</p>
         <dd>
             <b><dt>chess</dt></b>
-            <dd>i play mostly rapid and bullet. i'm around 1300-1400 ish rating on both</dd>
+            <dd class="pl-10">i play mostly rapid and bullet. i'm around 1500 ish.</dd>
             <b><dt>2D rigging</dt></b>
-            <dd>for the uninformed, it's like animation. You take a 2D drawing, and you make it able move in any way possible. I mostly rig <abbr title="Virtual YouTuber">VTuber</abbr> models for fun. Here's an example (excuse my voice, i was tired): </dd>
+            <dd class="pl-10">for the uninformed, it's like animation. You take a 2D drawing, and you make it able move in any way possible. I mostly rig <abbr title="Virtual YouTuber">VTuber</abbr> models for fun. Here's an example (excuse my voice, i was tired): </dd>
         </dd>
         <br>
         <figure>
-          <div class="flex justify-center py-10">
+          <div class="flex justify-center py-5">
             <video controls width="640" height="360" class="border-4 border-solid rounded-2xl"
                 <source src="media/vchuba.mp4" type="video/mp4">
             </video>
@@ -120,31 +139,27 @@
     <hr>
 
     <section id="projects">
-        <h2>personal projects</h2>
-
-        <div class="text-justify">
-        <p>
-            my main project so far is rankPredictor. it's a website which allows you to predict your rank for various entrance exams by inputting your marks. it currently has data for MET 2025 & 2024, KCET 2024. i had made it with a friend while anxiously waiting for my MET result.
-        </p>
-
-        <p>you can check it out at <a href="https://rankpredictor.in" target="_blank", title="rankPredictor">https://rankpredictor.in</a>, here's how it looks:</p>
-
-        <div class="flex justify-center py-3">
-          <img src="media/rank.png" alt="Rank Predictor UI" width="550" height="500" class="border-2 border-solid">
-        </div>
-
-        <p>
-            it works on the basis of linear interpolation. data is scraped from the web and and college campuses for various places, and the user's score is interpolated based on the scraped data to return a rank. it utilises simple HTML, CSS and Javascript with no <s>bloatware</s> frameworks like react. for MET 2024, it was very accurate for ranks greater than 7k with only a 1k difference in predicted and actual rank.
-        </p>
+      <div class="flex-col">
+          <div class="flex justify-between">
+            <div clas="flex-col">
+              <h2>personal projects</h2>
+              <p class="mr-4 text-justify">
+                my main project so far is rankPredictor. it's a website which allows you to predict your rank for various entrance exams by inputting your marks. it currently has data for MET 2025 & 2024, KCET 2024. i had made it with a friend while anxiously waiting for my MET result.
+                it works on the basis of linear interpolation. data is scraped from the web and and college campuses for various places, and the user's score is interpolated based on the scraped data to return a rank. it utilises simple HTML, CSS and Javascript with no <s>bloatware</s> frameworks like react. for MET 2024, it was very accurate for ranks greater than 7k with only a 1k difference in predicted and actual rank.
+                you can check it out at <a href="https://rankpredictor.in" target="_blank", title="rankPredictor">https://rankpredictor.in</a>
+              </p>
+            </div>
+              <img src="media/rank.png" alt="Rank Predictor UI" width="550" height="500" class="border-2 border-solid">
+          </div>
+      </div>
         <p>
             here's an example of how the data might look:
         </p>
-      </div>
-        <div class="flex justify-center">
-        <table>
+      <div class="flex justify-center text-center py-5 border-collapse">
+        <table class="table-auto">
             <caption>MET 2020 Results Data</caption>
             <thead>
-              <tr class="odd">
+              <tr class="bg-[#A9A9A9]">
                 <th>MET marks (/800)</th>
                 <th>MET %</th>
                 <th>Boards %</th>
@@ -153,112 +168,112 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="even">
+              <tr class="">
                 <td>613</td>
                 <td>76.625</td>
                 <td>95.8</td>
                 <td>85.975</td>
                 <td>108</td>
               </tr>
-              <tr class="odd">
+              <tr class="bg-[#545252]">
                 <td>579</td>
                 <td>72.375</td>
                 <td>96.6</td>
                 <td>83.425</td>
                 <td>228</td>
               </tr>
-              <tr class="even">
+              <tr class="">
                 <td>512</td>
                 <td>64</td>
                 <td>95.5</td>
                 <td>78.4</td>
                 <td>604</td>
               </tr>
-              <tr class="odd">
+              <tr class="bg-[#545252]">
                 <td>505</td>
                 <td>63.125</td>
                 <td>96.5</td>
                 <td>77.875</td>
                 <td>672</td>
               </tr>
-              <tr class="even">
+              <tr class="">
                 <td>480</td>
                 <td>60</td>
                 <td>96.66</td>
                 <td>76</td>
                 <td>950</td>
               </tr>
-              <tr class="odd">
+              <tr class="bg-[#545252]">
                 <td>406</td>
                 <td>50.75</td>
                 <td>96</td>
                 <td>70.45</td>
                 <td>2234</td>
               </tr>
-              <tr class="even">
+              <tr class="">
                 <td>490</td>
                 <td>61.25</td>
                 <td>85</td>
                 <td>72.75</td>
                 <td>3016</td>
               </tr>
-              <tr class="odd">
+              <tr class="bg-[#545252]">
                 <td>382</td>
                 <td>47.75</td>
                 <td>93</td>
                 <td>66.65</td>
                 <td>4493</td>
               </tr>
-              <tr class="even">
+              <tr class="">
                 <td>375</td>
                 <td>46.875</td>
                 <td>91.5</td>
                 <td>66.125</td>
                 <td>4700</td>
               </tr>
-              <tr class="odd">
+              <tr class="bg-[#545252]">
                 <td>370</td>
                 <td>46.25</td>
                 <td>93</td>
                 <td>65.75</td>
                 <td>6700</td>
               </tr>
-              <tr class="even">
+              <tr class="">
                 <td>375</td>
                 <td>46.875</td>
                 <td>81.5</td>
                 <td>62.125</td>
                 <td>11012</td>
               </tr>
-              <tr class="odd">
+              <tr class="bg-[#545252]">
                 <td>233</td>
                 <td>29.125</td>
                 <td>87.76</td>
                 <td>49.475</td>
                 <td>15762</td>
               </tr>
-              <tr class="even">
+              <tr class="">
                 <td>427</td>
                 <td>53.375</td>
                 <td>70</td>
                 <td>62.025</td>
                 <td>17044</td>
               </tr>
-              <tr class="odd">
+              <tr class="bg-[#545252]">
                 <td>356</td>
                 <td>44.5</td>
                 <td>75.5</td>
                 <td>58.7</td>
                 <td>18132</td>
               </tr>
-              <tr class="even">
+              <tr class="">
                 <td>568</td>
                 <td>71</td>
                 <td>0</td>
                 <td>42.6</td>
                 <td>21000</td>
               </tr>
-              <tr class="odd">
+              <tr class="bg-[#545252]">
                 <td>240</td>
                 <td>30</td>
                 <td>69</td>
@@ -266,7 +281,7 @@
                 <td>31500</td>
               </tr>
               <tfoot>
-                <tr class="even">
+                <tr class="">
                   <td><b>432</b></td>
                   <td><b>54</b></td>
                   <td><b>82.7</b></td>
@@ -278,6 +293,7 @@
             </tbody>
           </table>
         </div>
+
     </section>
 
     <hr>
@@ -285,23 +301,26 @@
     <section id="quotes">
     <h2>quote wall</h2>
 
-    <blockquote cite="https://www.goodreads.com/quotes/10480697-an-idiot-admires-complexity-a-genius-admires-simplicity-a-physicist"><h3>
-        <q>An idiot admires complexity, A Genius admires simplicity.</q> - <i>Terry A. Davis, Prophet of HolyC, The CIA's Worst Nightmare.
-    </i></h3></blockquote>
+    <div class="flex justify-between">
+      <blockquote cite="https://www.goodreads.com/quotes/10480697-an-idiot-admires-complexity-a-genius-admires-simplicity-a-physicist"><h3>
+          <q class="text-xl font-bold">An idiot admires complexity, A Genius admires simplicity.</q> - <i>Terry A. Davis, Prophet of HolyC, The CIA's Worst Nightmare.
+      </i></h3></blockquote>
+      <figure>
+          <img src= "media/prophet.jpg" alt="Terry A. Davis" id="border">
+          <figcaption class="text-center">Terry A. Davis</figcaption>
+      </figure>
+    </div>
 
-    <figure id="center">
-        <img src= "media/prophet.jpg" alt="Terry A. Davis" id="border">
-        <figcaption>Terry A. Davis</figcaption>
+  <div class="flex justify-between py-5">
+    <figure>
+      <img src="media/stallman.jpg" alt="Richard Stallman" width="300" height="450" id="border">
+      <figcaption class="text-center">Richard Stallman</figcaption>
     </figure>
 
-    <blockquote cite="https://www.brainyquote.com/quotes/richard_stallman_473487"><h3>
-        <q>Sharing is good, and with digital technology, sharing is easy.</q> - <i>Richard Stallman, Proprietary Software's Antichrist, The GNU Messiah
-    </i></h3></blockquote>
-
-    <figure id="center">
-        <img src="media/stallman.jpg" alt="Richard Stallman" width="300" height="450" id="border">
-        <figcaption>Richard Stallman</figcaption>
-    </figure>
+      <blockquote cite="https://www.brainyquote.com/quotes/richard_stallman_473487"><h3>
+          <q class="text-xl font-bold">Sharing is good, and with digital technology, sharing is easy.</q> - <i>Richard Stallman, Proprietary Software's Antichrist, The GNU Messiah
+      </i></h3></blockquote>
+ </div>
 
     </section>
 
@@ -314,11 +333,10 @@
     <input type="submit" value="submit" id="submit">
 
     <hr>
-    </main>
-
-    <!-- hi! -->
+      <!-- hi! -->
     <footer>
-        <p>made by pixel. all code is licensed under GPLv3.</p>
+      <p>made by pixel. all code is licensed under GPLv3.</p>
     </footer>
+    </main>
 </body>
 </html>
