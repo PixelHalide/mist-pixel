@@ -15,7 +15,7 @@
       <header>
           <div class="flex justify-center items-center">
             <h1 class="text-4xl">pixel's home</h1>
-            <button class="absolute right-0 text-black bg-yellow-50 hover:bg-yellow-100 rounded-full px-5 py-2 mr-10">Switch theme 🌓</button>
+            <button class="absolute right-0 text-black bg-yellow-50 transition delay-15 active:bg-yellow-200 ease-in-out hover:bg-yellow-100 rounded-full px-5 py-2 mr-10">Switch theme 🌓</button>
           </div>
           <nav class="flex flex-wrap justify-evenly px-35 py-5"><a href="#intro">intro</a>    <a href="#work">work experience</a>
           <a href="#hobbies">hobbies</a>    <a href="#projects">personal projects</a>   <a href="#quotes">quote wall</a></nav>
@@ -317,16 +317,18 @@
         <blockquote cite="https://www.brainyquote.com/quotes/richard_stallman_473487"><h3>
             <q class="text-xl font-bold">Sharing is good, and with digital technology, sharing is easy.</q> - <i>Richard Stallman, Proprietary Software's Antichrist, The GNU Messiah
         </i></h3></blockquote>
-  </div>
+    </div>
 
       </section>
       <p>if you liked my website, consider signing my guestbook!</p>
-      <input type="text" placeholder = "your name" list="names">
-      <datalist id="names">
-        <option value="pixel">
-      </datalist>
-      <input type="submit" value="submit" id="submit">
 
+      <div class="flex pb-3">
+        <input type="text" placeholder = "your name" list="names" class="border">
+        <datalist id="names">
+          <option value="pixel">
+        </datalist>
+        <button class="bg-green-700 py-0.5 hover:bg-green-800 active:bg-green-900 px-5 rounded border text-white">Submit</button>
+      </div>
       <hr>
         <!-- hi! -->
       <footer>
