@@ -15,7 +15,7 @@
       <header>
           <div class="flex justify-center items-center">
             <h1 class="text-4xl">pixel's home</h1>
-            <button class="absolute right-0 text-black bg-yellow-50 transition delay-15 active:bg-yellow-200 ease-in-out hover:bg-yellow-100 rounded-full px-5 py-2 mr-10">Switch theme 🌓</button>
+            <button class="absolute right-0 text-black bg-yellow-50 transition delay-15 active:bg-yellow-200 ease-in-out hover:bg-yellow-100 rounded-full px-5 py-2 mr-10 shadow hover:shadow-yellow-50">Switch theme 🌓</button>
           </div>
           <nav class="flex flex-wrap justify-evenly px-35 py-5"><a href="#intro">intro</a>    <a href="#work">work experience</a>
           <a href="#hobbies">hobbies</a>    <a href="#projects">personal projects</a>   <a href="#quotes">quote wall</a></nav>
@@ -78,7 +78,7 @@
                                 <li><strong>sentiment analysis:</strong> gets key words from the review and their sentiment (positive, negative, neutral).</li>
                                 <li><strong>staff mentions:</strong> detects the mentions of any staff in reviews and analyzes their performance</li>
                                 <li><strong>word clouds:</strong> generates a word cloud of positive and negative phrases</li>
-                                <li><strong>auto-summaries:</strong> it writes summaries about different things, like what people are saying about the staff, what needs improvement, what's good, etc.</li>
+                                <li><strong>summaries:</strong> it writes summaries about different things, like what people are saying about the staff, what needs improvement, what's good, etc.</li>
                             </ul>
                         </li>
                         <li><strong>generation time:</strong> it takes all the data and the AI insights, and automatically creates a PowerPoint presentation using this library called <code>python-pptx</code>. then, it turns it into a PDF and uploads it to S3 so we can send it to the clients.</li>
