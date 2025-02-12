@@ -788,9 +788,6 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-auto {
-    height: auto;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -1314,6 +1311,9 @@
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -1445,17 +1445,14 @@
   .bg-\[\#333333\] {
     background-color: #333333;
   }
-  .bg-\[\#545252\] {
-    background-color: #545252;
-  }
-  .bg-\[\#A9A9A9\] {
-    background-color: #A9A9A9;
-  }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1468,6 +1465,9 @@
   }
   .bg-yellow-50 {
     background-color: var(--color-yellow-50);
+  }
+  .bg-zinc-900 {
+    background-color: var(--color-zinc-900);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
@@ -1638,12 +1638,6 @@
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
-  .p-7 {
-    padding: calc(var(--spacing) * 7);
-  }
-  .p-58 {
-    padding: calc(var(--spacing) * 58);
-  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
@@ -1661,6 +1655,9 @@
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
   }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
@@ -1980,6 +1977,9 @@
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .shadow-gray-900 {
+    --tw-shadow-color: var(--color-gray-900);
+  }
   .shadow-initial {
     --tw-shadow-color: initial;
   }
@@ -2011,6 +2011,10 @@
   }
   .drop-shadow-none {
     --tw-drop-shadow:  ;
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .drop-shadow-xl {
+    --tw-drop-shadow: drop-shadow(var(--drop-shadow-xl));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .grayscale {
@@ -2294,14 +2298,9 @@ a {
     }
   }
 }
-table th {
-  padding-inline: calc(var(--spacing) * 5);
-}
 td {
-  border-radius: 0.25rem;
-}
-tr {
-  border-radius: 0.25rem;
+  padding-inline: calc(var(--spacing) * 7);
+  padding-block: calc(var(--spacing) * 2);
 }
 @keyframes spin {
   to {
