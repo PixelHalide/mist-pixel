@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +13,17 @@
   <body class="bg-black text-white py-3 px-5">
     <main>
       <header>
-          <div class="flex justify-center items-center">
-            <h1 class="text-4xl">pixel's home</h1>
-            <button class="absolute right-0 text-black bg-yellow-50 transition delay-15 active:bg-yellow-200 ease-in-out hover:bg-yellow-100 rounded-full px-5 py-2 mr-10 shadow hover:shadow-yellow-50">Switch theme 🌓</button>
-          </div>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+          <h1 class="text-2xl md:text-4xl">pixel's home</h1>
+          <button class="w-full md:w-auto md:absolute md:right-0">Switch theme 🌓</button>
+        </div>
           <nav class="flex flex-wrap justify-evenly px-35 py-5"><a href="#intro">intro</a>    <a href="#work">work experience</a>
           <a href="#hobbies">hobbies</a>    <a href="#projects">personal projects</a>   <a href="#quotes">quote wall</a></nav>
           <audio controls> <source src="media/intro.mp3"></audio>
       </header>
 
       <section id="intro" class="py-4">
+        <div class="bg-zinc-900 rounded-lg p-6">
           <p>hi!!! i'm pixel<sub> he/they</sub>, i'm an amateur developer and a cs undergrad. i like linux, cybersecurity and tech! on this page, you'll find information about me like my work experience, personal projects, hobbies and some quotes that you might find inspiring. hope you have a good stay!!!</p>
 
           <p>Here are my socials:</p>
@@ -45,6 +46,7 @@
               <li>MongoDB</li>
               <li>HTML, CSS (Tailwind)</li>
           </ul>
+        </div>
       </section>
 
       <hr>
