@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Sora:wght@100..800&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Hind+Mysuru:wght@300;400;500;600;700&family=Sora:wght@100..800&family=VT323&display=swap');
 @import "tailwindcss";
 
 hr{
@@ -6,6 +9,7 @@ hr{
 
 h2{
     @apply text-3xl pb-2
+    font-hind;
 }
 
 a{
@@ -14,4 +18,10 @@ a{
 
 td{
     @apply px-7 py-2;
+}
+
+@theme {
+    --font-title: "Caveat",sans-serif;
+    --font-sora: "Sora",sans-serif;
+    --font-hind: "Hind Mysuru",sans-serif;
 }
